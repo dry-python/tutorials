@@ -9,7 +9,7 @@ SECRET_KEY = "92)08k$_5!90rcx9h)doje#p(50a$dpa!8(pchqnz59bpo!ez&"
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 INTERNAL_IPS = ["127.0.0.1"]
 
@@ -51,8 +51,13 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],
         "APP_DIRS": True,
-        "OPTIONS": {
-            "context_processors": ["django.contrib.auth.context_processors.auth"]
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
         },
     }
 ]

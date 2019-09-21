@@ -6,3 +6,4 @@ django/media/
 django/static/
 dump.*
 .env/
+.idea/
