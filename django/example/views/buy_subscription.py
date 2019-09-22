@@ -23,9 +23,9 @@ class BuySubscriptionView(Injector):
     render = functions.Render.do
 
     @operation
-    def get(show_prices, category_id, render):
+    def get(show_prices, user, category_id, render):
 
-        return render(show_prices(category_id, None))
+        return render(show_prices(user, category_id, None))
 
     @operation
     def post(

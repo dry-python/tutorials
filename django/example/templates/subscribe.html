@@ -13,7 +13,7 @@
         <a href="{% url 'category-shop' %}">{% trans 'Shop' %}</a>
       </li>
       <li>
-        <a href="{% url 'profile' %}">{% trans 'Profile' %}</a>
+        <a href="{% url 'profile' %}">{% trans 'Profile' %} ({{ user.username }})</a>
       </li>
       <li>
         <a href="{% url 'notification-list' %}">{% trans 'Notifications' %}</a>
@@ -42,6 +42,12 @@
               For {{ period }} days.
             {% endblocktrans %}
           {% endwith %}
+        </p>
+        <p>
+            <b>{% trans 'Balance' %}</b>
+            {% with account_balance=account_balance %}
+                You have $ {{ account_balance }} available.
+            {% endwith %}
         </p>
         <form method="POST" action="">
           {% csrf_token %}

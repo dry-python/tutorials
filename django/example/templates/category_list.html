@@ -9,7 +9,7 @@
         <a href="{% url 'category-shop' %}">{% trans 'Shop' %}</a>
       </li>
       <li>
-        <a href="{% url 'profile' %}">{% trans 'Profile' %}</a>
+        <a href="{% url 'profile' %}">{% trans 'Profile' %} ({{ user.username }})</a>
       </li>
       <li>
         <a href="{% url 'notification-list' %}">{% trans 'Notifications' %}</a>

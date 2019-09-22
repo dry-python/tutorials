@@ -7,7 +7,7 @@ class ShopCategoryPrices:
     """Show purchase variants for category."""
 
     @story
-    @arguments("category_id", "error_in")
+    @arguments("user", "category_id", "error_in")
     def show(I):
 
         I.find_category
@@ -38,6 +38,7 @@ class ShopCategoryPrices:
             "category": ctx.category,
             "prices": ctx.prices,
             "forms": ctx.forms,
+            "account_balance": ctx.user.profile.balance,
         })
 
     # Dependencies.
