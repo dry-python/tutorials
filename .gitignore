@@ -6,6 +6,3 @@ django/media/
 django/static/
 dump.*
 .env/
-.idea/
-Pipfile
-Pipfile.lock

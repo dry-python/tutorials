@@ -9,7 +9,7 @@ SECRET_KEY = "92)08k$_5!90rcx9h)doje#p(50a$dpa!8(pchqnz59bpo!ez&"
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = []
 
 INTERNAL_IPS = ["127.0.0.1"]
 
