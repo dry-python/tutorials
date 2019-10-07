@@ -45,9 +45,9 @@
         </p>
         <p>
             <b>{% trans 'Balance' %}</b>
-            {% with account_balance=account_balance %}
+            {% blocktrans %}
                 You have $ {{ account_balance }} available.
-            {% endwith %}
+            {% endblocktrans %}
         </p>
         <form method="POST" action="">
           {% csrf_token %}
