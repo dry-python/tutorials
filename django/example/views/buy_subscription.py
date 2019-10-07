@@ -24,8 +24,9 @@ class BuySubscriptionView(Injector):
 
     @operation
     def get(show_prices, user, category_id, render):
-
-        return render(show_prices(user, category_id, None))
+        context = show_prices(category_id, None)
+        context["account_balance"] = user.profile.balance
+        return render(context)
 
     @operation
     def post(
