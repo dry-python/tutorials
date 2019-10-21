@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django_extensions",
     "debug_toolbar",
     "stories.contrib.debug_toolbars.django",
+    'rest_framework',
     # Project.
     "example.apps.ExampleConfig",
 ]
