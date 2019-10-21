@@ -62,8 +62,7 @@ class SignUp:
         notification = self.send_notification("welcome", ctx.profile)
         return Success(notification=notification)
 
-    def return_user(self, ctx):
-        print(ctx.user)
+    def show_user(self, ctx):
         return Result(ctx.user)
 
     # Dependencies.

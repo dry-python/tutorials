@@ -15,9 +15,8 @@ class SignUpModelViewSet(Injector):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     sign_up = implemented.SignUp.register_user
-    data = this.validated_data
 
     @operation
-    def create(request, data, sign_up):
-        result = sign_up.run(data, request)
+    def create(request, validated_data, sign_up):
+        result = sign_up.run(validated_data, request)
         return result.value
