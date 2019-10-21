@@ -1,5 +1,5 @@
 from attr import attrib, attrs
-from stories import Failure, Success, arguments, story
+from stories import Failure, Success, arguments, story, Result
 
 
 @attrs
@@ -17,6 +17,7 @@ class SignUp:
         I.persist_profile
         I.login_user
         I.send_welcome_notification
+        I.return_user
 
     # Steps.
 
@@ -60,6 +61,10 @@ class SignUp:
 
         notification = self.send_notification("welcome", ctx.profile)
         return Success(notification=notification)
+
+    def return_user(self, ctx):
+        print(ctx.user)
+        return Result(ctx.user)
 
     # Dependencies.
 
