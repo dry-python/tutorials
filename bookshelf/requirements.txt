@@ -1,8 +1,9 @@
+asgiref==3.2.3
 attrs==19.3.0
 git+https://github.com/dry-python/dependencies.git@master#egg=dependencies
 django-debug-toolbar==2.1
 django-extensions==2.2.5
-django==2.2.7
+django==3.0
 djangorestframework==3.10.3
 git+https://github.com/dry-python/mappers.git@master#egg=mappers
 pydantic==0.32.2
